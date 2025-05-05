@@ -1,0 +1,16 @@
+yolo:
+  model_path: "yolov8n.pt"
+  confidence: 0.5
+  classes: null  # or specify like [0, 1, 2] for person, bicycle, car etc.
+
+motion:
+  min_area: 1500  # Minimum area for motion detection
+  blur_kernel_size: 21
+  threshold_limit: 25
+  dilation_iterations: 2
+
+output:
+  save_video: true
+  save_logs: true
+  log_file: "detection_log.csv"
+  video_output_path: "captured_frames"

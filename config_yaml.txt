@@ -1,0 +1,46 @@
+# Computer Vision Co-pilot Configuration
+
+# YOLO detection settings
+yolo:
+  # Path to YOLOv8 model
+  model_path: "yolov8n.pt"
+  # Detection confidence threshold (0.0-1.0)
+  confidence: 0.5
+  # List of classes to detect (leave empty to detect all classes)
+  classes:
+    - person
+    - car
+    - motorbike
+    - bicycle
+    - truck
+    - bus
+    - dog
+    - cat
+    # Uncomment if you train a custom model that can detect potholes
+    # - pothole
+
+# Motion detection settings
+motion:
+  # Threshold for motion detection (0-255)
+  threshold: 25
+  # Minimum area (in pixels) to consider as motion
+  min_area: 5000
+  # Gaussian blur kernel size for noise reduction (must be odd)
+  blur_size: 21
+
+# Alert system settings
+alerts:
+  # Enable voice alerts
+  use_sound: true
+  # Cooldown between alerts in seconds
+  sound_cooldown: 3.0
+
+# Logging settings
+logging:
+  # Directory for log files
+  log_dir: "logs"
+
+# Video recording settings
+recording:
+  # Directory for recorded videos
+  output_dir: "recordings"
